@@ -1,0 +1,321 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Battledrome</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/quiz.css">
+</head>
+
+<body>
+<!-- <img src="https://images.alphacoders.com/293/293771.jpg"> -->
+ <h1>WELCOME TO BATTLEDROME!</h1>
+  <article id="game-container">
+<!-- Player Setup Page -->
+    <section id="player1-setup" class="card card--name">
+      <div class="card__prompt">
+        <div>ENTER YOUR NAME, MECHA 1:</div>
+        <div class="field">
+          <input type="text" autofocus="true" id="player-name" class="field__textinput">
+        </div>
+      </div>
+
+    <section id="player2-setup" class="card card--name">
+      <div class="card__prompt">
+        <div>ENTER YOUR NAME, MECHA 2:</div>
+        <div class="field">
+          <input type="text" autofocus="true" id="player-name" class="field__textinput">
+        </div>
+      </div>
+
+      <div id="name_button" class="card__button">
+        <a class="card__link btn btn--big btn--orange"
+           href="#"
+           next="card--class">
+          <span class="btn__prompt"></span>
+          <span class="btn__text">Select class</span>
+        </a>
+      </div>
+    </section>
+<!-- Class Select Page -->
+    <section id="class-select" class="card card--class">
+      <div class="card__prompt">
+        <div>CHOOSE YOUR PATH</div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div id="Bipedal" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">BIPEDAL</span>
+              </a>
+            </div>
+
+            <div id="Gunen_Lagann" class="card__button">
+            <img src="/Mecha/Gurren%20Lagann.jpg" height="100" width="100" alt="Gunen_Lagann">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Gunen_Lagann</span>
+              </a>
+            </div>
+            <div id="Gundam_Unicorn" class="card__button">
+              <img src="/Mecha/Unicorn-gundam.jpg" height="100" width="100" alt="Gundam_Unicorn">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Gundam_Unicorn</span>
+              </a>
+            </div>
+
+            <div id="Gundam_Seed" class="card__button">
+              <img src="/Mecha/Gundam%20Seed.jpg" height="100" width="100" alt="Gundam_Seed">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Gundam_Seed</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div id="Drone" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">DRONE</span>
+              </a>
+            </div>
+
+            <div id="Scout" class="card__button">
+            <img src="/Mecha/scout.jpg" height="100" width="100" alt="Scout">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Scout</span>
+              </a>
+            </div>
+
+            <div id="Vulture" class="card__button">
+            <img src="/Mecha/vulture.jpg" height="100" width="100" alt="Vulture">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Vulture</span>
+              </a>
+            </div>
+
+            <div id="Technician"class="card__button">
+            <img src="/Mecha/tech.jpg" height="100" width="100" alt="Technician">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Technician</span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="col-sm-4">
+            <div id="Combat" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">COMBAT</span>
+              </a>
+            </div>
+
+            <div id="Brawler" class="card__button">
+            <img src="/Mecha/brawler.jpg" height="100" width="100" alt="Brawler">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Brawler</span>
+              </a>
+            </div>
+
+            <div id="Rocketeer" class="card__button">
+            <img src="/Mecha/rocketeer.jpg" height="100" width="100" alt="Rocketeer">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Rocketeer</span>
+              </a>
+            </div>
+
+            <div id="Berserker" class="card__button">
+            <img src="/Mecha/berserker.jpg" height="100" width="100" alt="Berserker">
+              <a class="class__link btn btn--big btn--yellow" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Berserker</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--orange"
+           href="#"
+           next="card--weapon">
+          <span class="btn__prompt"></span>
+          <span class="btn__text">Select weapon</span>
+        </a>
+      </div>
+    </section>
+ <!-- Weapon Select Page -->
+   <!--  <section id="weapon-select" class="card card--weapon">
+      <div class="card__prompt">
+        <div>choose your weapon</div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--class">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div id = "Dagger" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Dagger</span>
+              </a>
+            </div>
+
+            <div id = "BroadSword" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">BroadSword</span>
+              </a>
+            </div>
+
+            <div id = "WarAxe" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">War Axe</span>
+              </a>
+            </div>
+
+            <div id= "Javelin" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Javelin</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div id = "ShortBow" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Short Bow</span>
+              </a>
+            </div>
+
+            <div id = "Warhammer" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span  class="btn__text">War Hammer</span>
+              </a>
+            </div>
+
+            <div id = "Glaive" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Glaive</span>
+              </a>
+            </div>
+
+            <div id = "Trident" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Trident</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div id = "Blowgun" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Blowgun</span>
+              </a>
+            </div>
+
+            <div id = "ThrowingStar" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Throwing Stars</span>
+              </a>
+            </div>
+
+            <div id = "Flail" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Flail</span>
+              </a>
+            </div>
+
+            <div id = "Whip" class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">Whip</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+          <div class="card__button">
+            <a class="card__link btn btn--big btn--orange"
+               href="#"
+               next="card--battleground">
+              <span class="btn__prompt"></span>
+              <span class="btn__text">defeat your enemies</span>
+            </a>
+          </div>
+          </div>
+        </section>
+    <section id="battleground" class="card card--battleground">
+      <div class="container">
+        <div class="row">
+          <div class="card__prompt">Two Men Enter, One Man Leave!!</div>
+          <div class="stats well col-md-6" id="inputPlayerStats"></div>
+          <div class="stats well col-md-6" id="inputEnemyStats"></div>
+
+          <div class="well col-md-6" id="inputPlayerAttack"></div>
+          <div class="well col-md-6" id="inputEnemyAttack"></div>
+        </div>
+        <div id="hideAttack" class="card__button attack__button">
+          <div  class="btn btn--big btn--orange">
+          <span class="btn__text">ATTACK</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="text-center">
+          <div class="well col-md-12" id="finalCountdown"></div>
+        </div>
+      </div>
+    </section>
+
+<!-- </div> -->
+  </article>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+ <!--  <script src="javascripts/weapons.js"></script>
+  <script src="javascripts/classes.js"></script>
+  <script src="javascripts/spells.js"></script>
+  <script src="javascripts/player.js"></script>
+  <script src="javascripts/enemies.js"></script> -->
+  <script src="javascripts/quiz.js"></script>
+
+</body>
+</html>
