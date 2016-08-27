@@ -1,19 +1,34 @@
+console.log ("quiz.js is ready to rock!!!");
+
+// function Robot({
+
+
+// })
+
  /*
   Test code to generate a human player and an orc player
  */
-// var Scout = new Battledome.Combatants.Human();
+// var Scout = new Batledrone.Combatants.Mecha();
 // Scout.setWeapon(new WarAxe());
 // Scout.generateClass();  // This will be used for "Surprise me" option
 // console.log(Scout.toString());
 
-// THOM- Creating a new player object for Combatants//////////////////
+// THOM- Creating 2 new player object for Combatants//////////////////
 // set race to human by default
-var playerOne = new Battledome.Combatants.Human();
+var playerOne = new Battledome.Combatants.Mecha();
+var playerTwo = new Battledome.Combatants.Mecha();
 
 // add event listner to input field and store the value in the variable playerName
 
 $("#name_button" ).click(function() {
-playerOne.playerName= $("#player-name").val();
+playerOne.playerName= $("#player-name1").val();
+ console.log( playerOne.playerName);
+ console.dir(playerOne);
+});
+// console.log(playerOne.playerName);
+
+$("#name_button" ).click(function() {
+playerOne.playerName= $("#player-name2").val();
  console.log( playerOne.playerName);
  console.dir(playerOne);
 });
@@ -22,58 +37,130 @@ playerOne.playerName= $("#player-name").val();
 ////event handlers for classes///////
 $("#Gunen_Lagann").click(function(){
   console.log("you picked the Gunen_Lagann");
-  playerOne.class = new Battledome.Arena.Gunen_Lagann();
+  playerOne.class = new Batledrone.Arena.Gunen_Lagann();
   console.log(playerOne);
 })
 
 $("#Gundam_Unicorn").click(function(){
   console.log("you picked the Gundam_Unicorn");
-  playerOne.class = new Battledome.Arena.Gundam_Unicorn;
+  playerOne.class = new Batledrone.Arena.Gundam_Unicorn;
   console.log(playerOne);
 })
 
 $("#Gundam_Seed").click(function(){
   console.log("you picked the Gundam_Seed");
-  playerOne.class = new Battledome.Arena.Gundam_Seed;
+  playerOne.class = new Batledrone.Arena.Gundam_Seed;
   console.log(playerOne);
 })
 
 $("#Scout").click(function(){
   console.log("you picked the Scout");
-  playerOne.class = new Battledome.Arena.Scout;
+  playerOne.class = new Batledrone.Arena.Scout;
   console.log(playerOne);
 })
 
 $("#Vulture").click(function(){
   console.log("you picked the Vulture");
-  playerOne.class = new Battledome.Arena.Vulture;
+  playerOne.class = new Batledrone.Arena.Vulture;
   console.log(playerOne);
 })
 
 $("#Technician").click(function(){
   console.log("you picked the Technician");
-  playerOne.class = new Battledome.Arena.Technician;
+  playerOne.class = new Batledrone.Arena.Technician;
   console.log(playerOne);
 })
 
 $("#Rocketeer").click(function(){
   console.log("you picked the Rocketeer");
-  playerOne.class = new Battledome.Arena.Rocketeer;
+  playerOne.class = new Batledrone.Arena.Rocketeer;
   console.log(playerOne);
 })
 
 $("#Brawler").click(function(){
   console.log("you picked the Brawler");
-  playerOne.class = new Battledome.Arena.Brawler;
+  playerOne.class = new Batledrone.Arena.Brawler;
   console.log(playerOne);
 })
 
 $("#Berserker").click(function(){
   console.log("you picked the Berserker");
-  playerOne.class = new Battledome.Arena.Berserker;
+  playerOne.class = new Batledrone.Arena.Berserker;
   console.log(playerOne);
 })
 
+////////////////EVENT LISTENERS FOR WEAPON BUTTONS////////////////////
+$("#Dagger").click(function(){
+  console.log("you picked the Dagger")
+  playerOne.weapon = new Dagger();
+  console.log(playerOne);
+})
+
+$("#BroadSword").click(function(){
+  console.log("you picked the BroadSword")
+  playerOne.weapon = new BroadSword();
+  console.log(playerOne);
+})
+
+$("#WarAxe").click(function(){
+  console.log("you picked the WarAxe")
+  playerOne.weapon = new WarAxe();
+  console.log(playerOne);
+})
+
+$("#Javelin").click(function(){
+  console.log("you picked the Javelin")
+  playerOne.weapon = new Javelin();
+  console.log(playerOne);
+})
+
+$("#ShortBow").click(function(){
+  console.log("you picked the ShortBow")
+  playerOne.weapon = new ShortBow();
+  console.log(playerOne);
+})
+
+$("#Warhammer").click(function(){
+  console.log("you picked the Warhammer")
+  playerOne.weapon = new Warhammer();
+  console.log(playerOne);
+})
+
+$("#Glaive").click(function(){
+  console.log("you picked the Glaive")
+  playerOne.weapon = new Glaive();
+  console.log(playerOne);
+})
+
+$("#Trident").click(function(){
+  console.log("you picked the Trident")
+  playerOne.weapon = new Trident();
+  console.log(playerOne);
+})
+
+$("#Blowgun").click(function(){
+  console.log("you picked the Blowgun")
+  playerOne.weapon = new Blowgun();
+  console.log(playerOne);
+})
+
+$("#ThrowingStar").click(function(){
+  console.log("you picked the ThrowingStar")
+  playerOne.weapon = new ThrowingStar();
+  console.log(playerOne);
+})
+
+$("#Flail").click(function(){
+  console.log("you picked the Flail")
+  playerOne.weapon = new Flail();
+  console.log(playerOne);
+})
+
+$("#Whip").click(function(){
+  console.log("you picked the Whip")
+  playerOne.weapon = new Whip();
+  console.log(playerOne);
+})
 
 // RESEARCH THIS SECTION
 // warrior.setWeapon(new WarAxe());
@@ -88,7 +175,7 @@ $("#Berserker").click(function(){
 /*
   Test code to generate a spell & BroadSword weapon damage
  */
-// var spell = new Battledome.SpellBook.Sphere();
+// var spell = new Batledrone.SpellBook.Sphere();
 // console.log("spell: ", spell.toString());
 
 // var broadSword1 = new BroadSword();
@@ -125,7 +212,7 @@ $(document).ready(function() {
         moveAlong = ($("#player-name").val() !== "");
 
         function beginCombat(playerOne) {
-          orc = new Battledome.Combatants.Orc();
+          orc = new Batledrone.Combatants.Orc();
           orc.generateClass();
           console.log(orc.health);
           orcHealth = orc.health;
@@ -158,7 +245,7 @@ $(document).ready(function() {
 /*new code: when attack button is pressed event listener*/
   $(".attack__button").click(function(e) {
     console.log("you pressed the attack button");
-    // var foe = new Battledome.Combatants.Monster();
+    // var foe = new Batledrone.Combatants.Monster();
     // console.log("spell: ", spell.toString());
     // console.log("player one health at start: ", playerHealth);
     var player1Damage = playerOne.weapon.attackDamage();

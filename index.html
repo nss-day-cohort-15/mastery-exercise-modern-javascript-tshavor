@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>Battledome</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href=""> rel="stylesheet" type="text/css" href="styles/quiz.css">
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="/styles/quiz.css" href=""> rel="stylesheet" type="text/css" href="styles/quiz.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <div class="field">
           <input type="text" autofocus="true" id="player-name1" class="field__textinput">
         </div>
-        <button type="button" id= Mecha1_submitButton class="btn btn-primary">Mecha 1 Submit:</button>
+        <button type="button" id= "mecha1_SubmitButton" class="btn btn-primary">Mecha 1 Submit:</button>
 
       <div class="card__prompt">
         <div>ENTER YOUR NAME, MECHA 2:</div>
@@ -28,7 +28,7 @@
           <input type="text" autofocus="false" id="player-name2" class="field__textinput">
         </div>
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <button type="button" id= Mecha1_submitButton class="btn btn-primary">Mecha 2 Submit:</button>
+        <button type="button" id= "mecha2_SubmitButton" class="btn btn-primary">Mecha 2 Submit:</button>
       </div>
     </section>
 
@@ -140,17 +140,16 @@
         </div>
       </div>
 
-      <!-- <div class="card__button">
-        <a class="card__link btn btn--big btn--orange"
-           href="#"
-           next="card--weapon">
-          <span class="btn__prompt"></span>
-          <span class="btn__text">Select weapon</span>
-        </a>
-      </div> -->
+      <div class="card__button">
+    <a class="card__link btn btn--big btn--orange" href="#" next="card--weapon">
+        <span class="btn__prompt"></span>
+        <span class="btn__text">Select weapon</span>
+    </a>
+</div>
+
     </section>
  <!-- Weapon Select Page -->
-   <!--  <section id="weapon-select" class="card card--weapon">
+    <section id="weapon-select" class="card card--weapon">
       <div class="card__prompt">
         <div>choose your weapon</div>
         <div>
@@ -163,99 +162,7 @@
         </div>
       </div>
 
-<div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4">
-            <div id = "Dagger" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Dagger</span>
-              </a>
-            </div>
 
-            <div id = "BroadSword" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">BroadSword</span>
-              </a>
-            </div>
-
-            <div id = "WarAxe" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">War Axe</span>
-              </a>
-            </div>
-
-            <div id= "Javelin" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Javelin</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div id = "ShortBow" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Short Bow</span>
-              </a>
-            </div>
-
-            <div id = "Warhammer" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span  class="btn__text">War Hammer</span>
-              </a>
-            </div>
-
-            <div id = "Glaive" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Glaive</span>
-              </a>
-            </div>
-
-            <div id = "Trident" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Trident</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div id = "Blowgun" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Blowgun</span>
-              </a>
-            </div>
-
-            <div id = "ThrowingStar" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Throwing Stars</span>
-              </a>
-            </div>
-
-            <div id = "Flail" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Flail</span>
-              </a>
-            </div>
-
-            <div id = "Whip" class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
-                <span class="btn__text">Whip</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>  -->
           <div class="card__button">
             <a class="card__link btn btn--big btn--orange"
                href="#"
@@ -290,17 +197,17 @@
       </div>
     </section>
 
-<!-- </div> -->
+</div>
   </article>
 
-  <script src="/quiz.js"></script>
-  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/Javascripts/quiz.js"></script>
+  <script src="/Javascripts/app.js"></script>
+  <script src="/Javascripts/classes.js"></script>
+  <script src="/Javascripts/player.js"></script>
   <!-- <script src="javascripts/weapons.js"></script> -->
-  <script src="/classes.js"></script>
   <!-- <script src="javascripts/spells.js"></script> -->
-  <!-- <script src="javascripts/player.js"></script> -->
-  <!-- <script src="javascripts/enemies.js"></script> -->
+  <!-- <script src="javascripts/enemies.js"></script>
 
 </body>
 </html>
