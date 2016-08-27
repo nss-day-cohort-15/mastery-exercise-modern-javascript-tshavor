@@ -1,16 +1,16 @@
 /*
-  Modify this file for Battledrome !
+  Modify this file for Battledome !
  */
-// Battledrome (Battledrome)
+// Battledome (Battledome)
 // Arena (Arena)
 // Base_Mecha (Base_Mecha)
-var Battledrome = Battledrome || {};
-Battledrome.Arena = {};
+var Battledome = Battledome || {};
+Battledome.Arena = {};
 
 /*
   Base function for a player, or enemy, class (profession)
  */
-Battledrome.Arena.PlayerClass = function() {
+Battledome.Arena.PlayerClass = function() {
   this.name = "Base_Mecha";
   this.healthBonus = 0;
   this.strengthBonus = 0;
@@ -25,41 +25,34 @@ Battledrome.Arena.PlayerClass = function() {
 
 /*
     FIGHTER CLASSES (Bipedal)
-      - Gunen_Lagann (Gunen_Lagann)
-      - Gundam_Unicorn (Gundam_Unicorn)
-      - Gundam_Seed (Gundam_Seed)
 
  */
-Battledrome.Arena.Bipedal = function() {
+Battledome.Arena.Bipedal = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
 };
-Battledrome.Arena.Bipedal.prototype = new Battledrome.Arena.PlayerClass();
+Battledome.Arena.Bipedal.prototype = new Battledome.Arena.PlayerClass();
 
-
-Battledrome.Arena.Gunen_Lagann = function() {
+Battledome.Arena.Gunen_Lagann = function() {
   this.name = "Gunen_Lagann";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
 };
-Battledrome.Arena.Gunen_Lagann.prototype = new Battledrome.Arena.Bipedal();
+Battledome.Arena.Gunen_Lagann.prototype = new Battledome.Arena.Bipedal();
 
-
-Battledrome.Arena.Gundam_Unicorn = function() {
+Battledome.Arena.Gundam_Unicorn = function() {
   this.name = "Gundam_Unicorn";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
 };
-Battledrome.Arena.Gundam_Unicorn.prototype = new Battledrome.Arena.Bipedal();
+Battledome.Arena.Gundam_Unicorn.prototype = new Battledome.Arena.Bipedal();
 
-
-Battledrome.Arena.Gundam_Seed = function() {
+Battledome.Arena.Gundam_Seed = function() {
   this.name = "Gundam_Seed";
   this.healthBonus = this.healthBonus + 35;
   this.strengthBonus = this.strengthBonus + 20;
 };
-Battledrome.Arena.Gundam_Seed.prototype = new Battledrome.Arena.Bipedal();
-
+Battledome.Arena.Gundam_Seed.prototype = new Battledome.Arena.Bipedal();
 /*
     MAGE (Drone)
       - Scout (Scout)
@@ -67,79 +60,73 @@ Battledrome.Arena.Gundam_Seed.prototype = new Battledrome.Arena.Bipedal();
       - Technician (Technician)
 
  */
-Battledrome.Arena.Drone = function() {
+Battledome.Arena.Drone = function() {
   this.name = "Drone";
   // this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Battledrome.Arena.Drone.prototype = new Battledrome.Arena.PlayerClass();
+Battledome.Arena.Drone.prototype = new Battledome.Arena.PlayerClass();
 
-
-Battledrome.Arena.Scout = function() {
+Battledome.Arena.Scout = function() {
   this.name = "Scout";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Battledrome.Arena.Scout.prototype = new Battledrome.Arena.Drone();
+Battledome.Arena.Scout.prototype = new Battledome.Arena.Drone();
 
-
-Battledrome.Arena.Vulture = function() {
+Battledome.Arena.Vulture = function() {
   this.name = "Vulture";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-Battledrome.Arena.Vulture.prototype = new Battledrome.Arena.Drone();
+Battledome.Arena.Vulture.prototype = new Battledome.Arena.Drone();
 
 
-Battledrome.Arena.Conjurer = function() {
-  this.name = "Conjurer";
+Battledome.Arena.Technician = function() {
+  this.name = "Technician";
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-Battledrome.Arena.Conjurer.prototype = new Battledrome.Arena.Drone();
-
+Battledome.Arena.Technician.prototype = new Battledome.Arena.Drone();
 /*
     STEALTH CLASSES (COMBAT)
       - Rocketeer (Rocketeer)
       - Brawler (Brawler)
-      - Berserker (Gundam_Seed)
+      - Gundam_Seed (Gundam_Seed)
  */
-Battledrome.Arena.Combat = function() {
+Battledome.Arena.Combat = function() {
   this.name = "Combat";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 0;
   this.intelligenceBonus = this.intelligenceBonus + 0;
 };
-Battledrome.Arena.Combat.prototype = new Battledrome.Arena.PlayerClass();
+Battledome.Arena.Combat.prototype = new Battledome.Arena.PlayerClass();
 
-
-Battledrome.Arena.Rocketeer = function() {
+Battledome.Arena.Rocketeer = function() {
   this.name = "Rocketeer";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus +5;
   this.intelligenceBonus = this.intelligenceBonus + 5;
 };
-Battledrome.Arena.Rocketeer.prototype = new Battledrome.Arena.Stealth();
+Battledome.Arena.Rocketeer.prototype = new Battledome.Arena.Combat();
 
-
-Battledrome.Arena.Brawler = function() {
+Battledome.Arena.Brawler = function() {
   this.name = "Brawler";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-Battledrome.Arena.Brawler.prototype = new Battledrome.Arena.Stealth();
+Battledome.Arena.Brawler.prototype = new Battledome.Arena.Combat();
 
-
-Battledrome.Arena.Berserker = function() {
+Battledome.Arena.Berserker = function() {
   this.name = "Berserker";
   this.healthBonus = this.healthBonus + 10;
-  this.strengthBonus = this.strengthBonus + 5;
-  this.intelligenceBonus = this.intelligenceBonus + 15;
+  this.strengthBonus = this.strengthBonus + 10;
+  this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-Battledrome.Arena.Berserker.prototype = new Battledrome.Arena.Stealth();
+Battledome.Arena.Berserker.prototype = new Battledome.Arena.Combat();
 

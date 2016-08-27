@@ -3,42 +3,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Battledrome</title>
+  <title>Battledome</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href=""> rel="stylesheet" type="text/css" href="styles/quiz.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/quiz.css">
 </head>
 
 <body>
 <!-- <img src="https://images.alphacoders.com/293/293771.jpg"> -->
- <h1>WELCOME TO BATTLEDROME!</h1>
+ <h1>WELCOME TO BATTLEDOME!</h1>
   <article id="game-container">
 <!-- Player Setup Page -->
-    <section id="player1-setup" class="card card--name">
+    <section id="player-setup" class="card card--name">
       <div class="card__prompt">
         <div>ENTER YOUR NAME, MECHA 1:</div>
         <div class="field">
-          <input type="text" autofocus="true" id="player-name" class="field__textinput">
+          <input type="text" autofocus="true" id="player-name1" class="field__textinput">
         </div>
-      </div>
+        <button type="button" id= Mecha1_submitButton class="btn btn-primary">Mecha 1 Submit:</button>
 
-    <section id="player2-setup" class="card card--name">
       <div class="card__prompt">
         <div>ENTER YOUR NAME, MECHA 2:</div>
         <div class="field">
-          <input type="text" autofocus="true" id="player-name" class="field__textinput">
+          <input type="text" autofocus="false" id="player-name2" class="field__textinput">
         </div>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" id= Mecha1_submitButton class="btn btn-primary">Mecha 2 Submit:</button>
       </div>
-
-      <!-- <div id="name_button" class="card__button">
-        <a class="card__link btn btn--big btn--orange"
-           href="#"
-           next="card--class">
-          <span class="btn__prompt"></span>
-          <span class="btn__text">Select class</span>
-        </a>
-      </div> -->
     </section>
+
 <!-- Class Select Page -->
     <section id="class-select" class="card card--class">
       <div class="card__prompt">
@@ -300,14 +293,14 @@
 <!-- </div> -->
   </article>
 
-  <script src="javascripts/quiz.js"></script>
+  <script src="/quiz.js"></script>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
- <!--  <script src="javascripts/weapons.js"></script>
-  <script src="javascripts/classes.js"></script>
-  <script src="javascripts/spells.js"></script>
-  <script src="javascripts/player.js"></script>
-  <script src="javascripts/enemies.js"></script> -->
+  <!-- <script src="javascripts/weapons.js"></script> -->
+  <script src="/classes.js"></script>
+  <!-- <script src="javascripts/spells.js"></script> -->
+  <!-- <script src="javascripts/player.js"></script> -->
+  <!-- <script src="javascripts/enemies.js"></script> -->
 
 </body>
 </html>
