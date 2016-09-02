@@ -1,48 +1,48 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
-Gauntlet.Combatants = {};
+// var Gauntlet = Gauntlet || {};
+// Gauntlet.Combatants = {};
 
-/*
-  Define the base object for any player of Gauntlet,
-  whether a human player or a monster.
- */
-Gauntlet.Combatants.Player = function(name) {
-    this.species = null;
-    this.class = null;
-    this.weapon = null;
+// /*
+//   Define the base object for any player of Gauntlet,
+//   whether a human player or a monster.
+//  */
+// Gauntlet.Combatants.Player = function(name) {
+//     this.species = null;
+//     this.class = null;
+//     this.weapon = null;
 
-    this.playerName = name || "Oscar the Orc";
-    this.health = Math.floor(Math.random() * 40 + 50);
-    this.limbs = ["head", "neck", "arm", "leg", "torso"];
-    this.skinColor = "gray";
-    this.skinColors = [this.skinColor];
-    this.strength = 90;
-    this.intelligence = 90;
+//     this.playerName = name || "Oscar the Orc";
+//     this.health = Math.floor(Math.random() * 40 + 50);
+//     this.limbs = ["head", "neck", "arm", "leg", "torso"];
+//     this.skinColor = "gray";
+//     this.skinColors = [this.skinColor];
+//     this.strength = 90;
+//     this.intelligence = 90;
 
-    this.toString = function() {
-        var output = [this.playerName,
-            ": a ",
-            this.skinColor,
-            " skinned ",
-            this.species,
-            " ",
-            this.class,
-            " with ",
-            this.health,
-            " health ",
-            (this.class.magical) ? "Able to cast " : " wielding a ",
-            this.weapon.name,
-            "!"
-        ].join("");
-        return output;
-    };
-};
+//     this.toString = function() {
+//         var output = [this.playerName,
+//             ": a ",
+//             this.skinColor,
+//             " skinned ",
+//             this.species,
+//             " ",
+//             this.class,
+//             " with ",
+//             this.health,
+//             " health ",
+//             (this.class.magical) ? "Able to cast " : " wielding a ",
+//             this.weapon.name,
+//             "!"
+//         ].join("");
+//         return output;
+//     };
+// };
 
-Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
-    this.weapon = newWeapon;
-}
+// Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+//     this.weapon = newWeapon;
+// }
 
 // thom- this is not being used!
 // Gauntlet.Combatants.Player.prototype.generateClass = function() {
@@ -64,29 +64,29 @@ Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   Define the base properties for a human in a
   constructor function.
  */
-Gauntlet.Combatants.Mecha = function() {
-    var randomSkin;
+// Gauntlet.Combatants.Mecha = function() {
+//     var randomSkin;
 
-    this.species = "Mecha";
-    this.intelligence = this.intelligence + 20;
+//     this.species = "Mecha";
+//     this.intelligence = this.intelligence + 20;
 
-    this.skinColors.push("brown", "red", "white", "disease");
-    randomSkin = Math.round(Math.random() * (this.skinColors.length - 1));
-    this.skinColor = this.skinColors[randomSkin];
+//     this.skinColors.push("brown", "red", "white", "disease");
+//     randomSkin = Math.round(Math.random() * (this.skinColors.length - 1));
+//     this.skinColor = this.skinColors[randomSkin];
 
-    this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk", "Wizard", "Sorcerer", "Thief", "Ninja", "Assassin"];
-};
-Gauntlet.Combatants.Mecha.prototype = new Gauntlet.Combatants.Player();
+//     this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk", "Wizard", "Sorcerer", "Thief", "Ninja", "Assassin"];
+// };
+// Gauntlet.Combatants.Mecha.prototype = new Gauntlet.Combatants.Player();
 
 
 /*
   Define the base properties for a monster in a
   constructor function.
  */
-Gauntlet.Combatants.Monster = function() {
-    this.health = this.health - 30;
-    this.intelligence = this.intelligence - 20;
-    this.strength = this.strength + 30;
-};
+// Gauntlet.Combatants.Monster = function() {
+//     this.health = this.health - 30;
+//     this.intelligence = this.intelligence - 20;
+//     this.strength = this.strength + 30;
+// };
 
-Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+// Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
