@@ -1,92 +1,30 @@
-/*
-  TODO: Modularize this code with IIFE or Browserify
- */
-// var Gauntlet = Gauntlet || {};
-// Gauntlet.Combatants = {};
-
-// /*
-//   Define the base object for any player of Gauntlet,
-//   whether a human player or a monster.
-//  */
-// Gauntlet.Combatants.Player = function(name) {
-//     this.species = null;
-//     this.class = null;
-//     this.weapon = null;
-
-//     this.playerName = name || "Oscar the Orc";
-//     this.health = Math.floor(Math.random() * 40 + 50);
-//     this.limbs = ["head", "neck", "arm", "leg", "torso"];
-//     this.skinColor = "gray";
-//     this.skinColors = [this.skinColor];
-//     this.strength = 90;
-//     this.intelligence = 90;
-
-//     this.toString = function() {
-//         var output = [this.playerName,
-//             ": a ",
-//             this.skinColor,
-//             " skinned ",
-//             this.species,
-//             " ",
-//             this.class,
-//             " with ",
-//             this.health,
-//             " health ",
-//             (this.class.magical) ? "Able to cast " : " wielding a ",
-//             this.weapon.name,
-//             "!"
-//         ].join("");
-//         return output;
-//     };
-// };
-
-// Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
-//     this.weapon = newWeapon;
-// }
-
-// thom- this is not being used!
-// Gauntlet.Combatants.Player.prototype.generateClass = function() {
-//   // Get a random index from the allowed classes array
-//   var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
-
-//   // Get the string at the index
-//   var randomClass = this.allowedClasses[random];
-//   console.log("randomClass worked")
-//   // Composes the corresponding player class into the player object
-//   this.class = new Gauntlet.GuildHall[randomClass]();
-
-//   // Add the health bonus
-//   this.health += this.class.healthBonus;
-//   return this.class;
-// };
-
-/*
-  Define the base properties for a human in a
-  constructor function.
- */
-// Gauntlet.Combatants.Mecha = function() {
-//     var randomSkin;
-
-//     this.species = "Mecha";
-//     this.intelligence = this.intelligence + 20;
-
-//     this.skinColors.push("brown", "red", "white", "disease");
-//     randomSkin = Math.round(Math.random() * (this.skinColors.length - 1));
-//     this.skinColor = this.skinColors[randomSkin];
-
-//     this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk", "Wizard", "Sorcerer", "Thief", "Ninja", "Assassin"];
-// };
-// Gauntlet.Combatants.Mecha.prototype = new Gauntlet.Combatants.Player();
+"use strict";
 
 
-/*
-  Define the base properties for a monster in a
-  constructor function.
- */
-// Gauntlet.Combatants.Monster = function() {
-//     this.health = this.health - 30;
-//     this.intelligence = this.intelligence - 20;
-//     this.strength = this.strength + 30;
-// };
+function makeMecha1 () {
 
-// Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+
+        if ($("#player1_TextInput").val() !== ''){
+        let text = $(this).text();
+        let userName1 = $('#input1').val();
+        mecha1 = new Battledome.Combatants[text](userName1);
+        printFighter1Stats(fighter1);
+        f1x = true;
+    }
+
+//Requirement to ensure input text is completed:
+
+    else {
+        $('#fighter1stats').html("In the words of Yoda: Enter a name for your fighter and then select its type, or fight you will not");
+    }
+    };
+
+    function makeMecha2 () {
+        if ($("#player2_TextInput").val() !== '' && $(this).text() !== "I'm Too Lazy To Choose"){
+        let text = $(this).text();
+        let userName1 = $('#input1').val();
+        fighter1 = new Battledome.Combatants[text](userName1);
+        printFighter1Stats(fighter1);
+        f1x = true;
+    }
+		};
