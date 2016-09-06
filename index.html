@@ -20,7 +20,7 @@
 <!-- Player Setup Page -->
     <div id= "player setup page">
 
-    <section id="player1-setup" class="card card--name">
+    <section class = "player1-setup" class="card card--name">
       <div class="card__prompt">
         <div>ENTER YOUR NAME, Player 1:</div>
         <div class="field">
@@ -31,9 +31,27 @@
         <div id=player1_mechaSelection></div>
     </section>
 
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Select Your Mecha!
+    <span class="caret"></span>
+  </button>
+  <ul id= "dropdownMenu1" class="dropdown-menu menuOne" aria-labelledby="dropdownMenu1">
+    <li><a href="#" data-value="action">Gunen_Lagann</a></li>
+    <li><a href="#" data-value="another action">Gundam_Unicorn</a></li>
+    <li><a href="#" data-value="something else here">Scout</a></li>
+    <li><a href="#" data-value="separated link">Vulture</a></li>
+    <li><a href="#" data-value="separated link">Brawler</a></li>
+    <li><a href="#" data-value="separated link">Rocketeer</a></li>
+  </ul>
+</div>
+
+
+
+
 
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Your Mecha!
+    <button class="class1-select" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select Your Mecha!
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
       <li class="dropdown-header">Bipedal Mecha</li>
@@ -62,8 +80,24 @@
     </section>
     </div>
 
+
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Your Mecha!
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Select Your Mecha!
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu menuTwo" aria-labelledby="dropdownMenu2">
+    <li><a href="#" data-value="Gunen_Lagann">Gunen_Lagann</a></li>
+    <li><a href="#" data-value="Gundam_Unicorn">Gundam_Unicorn</a></li>
+    <li><a href="#" data-value="Scout">Scout</a></li>
+    <li><a href="#" data-value="Vulture">Vulture</a></li>
+    <li><a href="#" data-value="Brawler">Brawler</a></li>
+    <li><a href="#" data-value="Rocketeer">Rocketeer</a></li>
+  </ul>
+</div>
+
+<!-- <div class="dropdown">
+    <button id = "class2-select" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Your Mecha!
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
       <li class="dropdown-header">Bipedal Mecha</li>
@@ -78,7 +112,7 @@
       <li><a href="#">Brawler</a></li>
       <li><a href="#">Rocketeer</a></li>
     </ul>
-</div>
+</div> -->
 
 
 <!--
@@ -184,5 +218,6 @@
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/javascripts/quiz.js"></script>
   <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/player.js"></script>
 </body>
 </html>
