@@ -10,13 +10,7 @@
 </head>
 
 <body>
-<!-- <img src="https://images.alphacoders.com/293/293771.jpg"> -->
  <h1>WELCOME TO BATTLEDOME!</h1>
-
-
-  <div class="container" style="background-image: url("/Mecha/Wallpaper/24834_hawken.jpg")>
-
-
 <!-- Player Setup Page -->
     <div id= "player setup page">
 
@@ -26,34 +20,13 @@
         <div class="field">
           <input type="text" autofocus="true" id="player1_TextInput" class="field__textinput">
         </div>
-        <!-- <button type="button" id= "mecha1_SubmitButton" class="btn btn-primary">Mecha 1 Submit:</button> -->
-
         <div id=player1_mechaSelection></div>
     </section>
 
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Select Your Mecha!
-    <span class="caret"></span>
-  </button>
-  <ul id= "dropdownMenu1" class="dropdown-menu menuOne" aria-labelledby="dropdownMenu1">
-    <li><a href="#" data-value="action">Gunen_Lagann</a></li>
-    <li><a href="#" data-value="another action">Gundam_Unicorn</a></li>
-    <li><a href="#" data-value="something else here">Scout</a></li>
-    <li><a href="#" data-value="separated link">Vulture</a></li>
-    <li><a href="#" data-value="separated link">Brawler</a></li>
-    <li><a href="#" data-value="separated link">Rocketeer</a></li>
-  </ul>
-</div>
-
-
-
-
-
-<div class="dropdown">
-    <button class="class1-select" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select Your Mecha!
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Your Mecha!
     <span class="caret"></span></button>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu menuOne">
       <li class="dropdown-header">Bipedal Mecha</li>
       <li><a href="#">Gunen_Lagann</a></li>
       <li><a href="#">Gundam_Unicorn</a></li>
@@ -67,39 +40,23 @@
       <li><a href="#">Rocketeer</a></li>
     </ul>
   </div>
-<!-- //////////////////////// -->
+
     <section id="player2-setup" class="card card--name">
       <div class="card__prompt">
         <div>ENTER YOUR NAME, MECHA 2:</div>
         <div class="field">
           <input type="text" autofocus="false" id="player2_TextInput" class="field__textinput" class= "hidden">
         </div>
-        <!-- <button type="button" id= "mecha2_SubmitButton" class="btn btn-primary" class= "hidden">Mecha 2 Submit:</button> -->
+
         <div id=player2_mechaSelection></div>
       </div>
     </section>
     </div>
 
-
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Select Your Mecha!
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu menuTwo" aria-labelledby="dropdownMenu2">
-    <li><a href="#" data-value="Gunen_Lagann">Gunen_Lagann</a></li>
-    <li><a href="#" data-value="Gundam_Unicorn">Gundam_Unicorn</a></li>
-    <li><a href="#" data-value="Scout">Scout</a></li>
-    <li><a href="#" data-value="Vulture">Vulture</a></li>
-    <li><a href="#" data-value="Brawler">Brawler</a></li>
-    <li><a href="#" data-value="Rocketeer">Rocketeer</a></li>
-  </ul>
-</div>
-
-<!-- <div class="dropdown">
-    <button id = "class2-select" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Your Mecha!
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Your Mecha!
     <span class="caret"></span></button>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu menuTwo">
       <li class="dropdown-header">Bipedal Mecha</li>
       <li><a href="#">Gunen_Lagann</a></li>
       <li><a href="#">Gundam_Unicorn</a></li>
@@ -112,81 +69,7 @@
       <li><a href="#">Brawler</a></li>
       <li><a href="#">Rocketeer</a></li>
     </ul>
-</div> -->
-
-
-<!--
-<!-- Class Select Page -->
-    <!-- <section id="class-select" class="card card--class">
-      <div class="card__prompt">
-        <h3>CHOOSE YOUR MECHA!</h3>
-        <div>
-          <a class="card__back btn btn--small"
-             href="#"
-             previous="card--name">
-            <span class="btn__prompt">&lt;</span>
-            <span class="btn__text">Back</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4">
-            <div id="Bipedal" class="">
-            <h4>BIPEDAL</h4>
-            </div>
-
-            <div id="Gunen_Lagann" class="card__button">
-            <img src="/Mecha/Gurren%20Lagann.jpg" height="200" width="200" alt="Gunen_Lagann">
-              <button type="button" id= "Gunen_Lagann" class="btn btn-info">Gunen_Lagann</button>
-
-            </div>
-            <div id="Gundam_Unicorn" class="card__button">
-              <img src="/Mecha/Unicorn-gundam.jpg" height="200" width="200" alt="Gundam_Unicorn">
-              <button type="button" id= "Gundam_Unicorn" class="btn btn-info">Gundam_Unicorn</button>
-
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div id="Drone" class="">
-            <h4>DRONE</h4>
-            </div>
-
-            <div id="Scout" class="card__button">
-            <img src="/Mecha/scout.jpg" height="200" width="200" alt="Scout">
-            <button type="button" id= "Scout" class="btn btn-info">Scout</button>
-            </div>
-
-            <div id="Vulture" class="card__button">
-            <img src="/Mecha/vulture.jpg" height="200" width="200" alt="Vulture">
-            <button type="button" id= "Vulture" class="btn btn-info">Vulture</button>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <div id="Combat" class="">
-            <h4>COMBAT</h4>
-            </div>
-
-            <div id="Brawler" class="card__button">
-            <img src="/Mecha/brawler.jpg" height="200" width="200" alt="Brawler">
-              <button type="button" id= "Brawler" class="btn btn-info">Brawler</button>
-            </div>
-
-            <div id="Rocketeer" class="card__button">
-            <img src="/Mecha/rocketeer.jpg" height="200" width="200" alt="Rocketeer">
-              <button type="button" id= "Rocketeer" class="btn btn-info">Rocketeer</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-
-
-
-
+</div>
 
     <!-- <section id="battleground" class="card card--battleground"> -->
       <!-- <div class="container"> -->
@@ -198,26 +81,14 @@
           <div class="well col-md-6" id="inputPlayerAttack"></div>
           <div class="well col-md-6" id="inputEnemyAttack"></div>
         </div>
-        <!-- <div id="hideAttack" class="card__button attack__button">
-          <div  class="btn btn--big btn--orange">
-          <span class="btn__text">ATTACK</span>
-          </div>
-        </div> -->
-      <!-- </div> -->
-      <!-- <div class="container">
-        <div class="row">
-          <div class="text-center">
-          <div class="well col-md-12" id="finalCountdown"></div>
-        </div>
-      </div>
-    </section>
-</div> -->
- </div>
+
+
+  <button type="button" id= "fightButton" class="btn btn-danger">FIGHT!</button>
 
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/javascripts/quiz.js"></script>
   <script src="/javascripts/app.js"></script>
-  <script src="/javascripts/player.js"></script>
+
 </body>
 </html>
