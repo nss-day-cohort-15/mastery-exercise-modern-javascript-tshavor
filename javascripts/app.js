@@ -5,8 +5,6 @@ let playerOneName = "";
 let playerTwoName= "";
 let playerOne= "";
 let playerTwo= "";
-// let makeMechaOne = "";
-// let makeMechaTwo = "";
 
 
 //////example for drop down event listeners from web///////////
@@ -14,9 +12,7 @@ $(".menuOne li a").click(function(){
    $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
     $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
   // this.text correctly indicates the robot selected!
-  // console.log("Fighter 1 Selected", this.text);
-  // console.dir(this);
-  // should I fire this function here?
+  console.log("Fighter 1 Selected", this.text);
   var a= this.text;
   makeMechaOne(a)
 });
@@ -24,9 +20,9 @@ $(".menuOne li a").click(function(){
 $(".menuTwo li a").click(function(){
   $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
   $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-  // this.text correctly indicates the robot selected!
-  // console.log("Fighter 2 Selected", this.text);
   var b= this.text;
+  // debugger;
+  console.log("this.text", this.text);
   makeMechaTwo(b)
 });
 
@@ -41,6 +37,7 @@ console.log("You clicked FIGHT!");
         if ($("#player1_TextInput").val() !== ''){
         let playerOneName = $("#player1_TextInput").val();
         playerOne = new Battledome.Combatants[x](playerOneName);
+        playerOne.setModel(x);
         // debugger;
         console.log("playerOne", playerOne);
         printMechaOneStats();
@@ -53,7 +50,8 @@ console.log("You clicked FIGHT!");
           // console.log("makeMechaTwo FIRED!");
           if ($("#player2_TextInput").val() !== ''){
           let playerTwoName = $("#player2_TextInput").val();
-          let playerTwo = new Battledome.Combatants[y](playerTwoName);
+           playerTwo = new Battledome.Combatants[y](playerTwoName);
+           playerTwo.setModel(y);
           console.log("playerTwo", playerTwo);
           printMechaTwoStats();
           playerTwo = true;
@@ -65,21 +63,18 @@ console.log("You clicked FIGHT!");
 
     function printMechaOneStats(x){
           let MechaOneStats = $(playerOneName);
+          // debugger;
           console.log(playerOne);
           console.log(playerOne.name);
-          // let MechaOneStats= `${playerOne.name}`;
-          // $("#playerOneStats").prepend(${x.name});
-
-          $("#playerOneStats").html("Thom" + playerOneName);
+          $("#playerOneStats").html("Player" + " " + playerOne.name + " " + "has selected a" + " " + playerOne.model + " " + "with" + " " + playerOne.health + " " + "health, that does" + " " + playerOne.damage + " " + "damage!");
 
     };
 
     function printMechaTwoStats(y){
-        let MechaTwoStats = $(playerOneName);
-          console.log(playerTwo);
+        let MechaTwoStats = $(playerTwoName);
+          console.log("playerTwo", playerTwo);
           console.log(playerTwo.name);
-          // let MechaTwoStats = `<div style="border: 1px dotted black; border-radius: 25px; padding: 10px; margin-top:10px; background-color: lightgrey;">${x.name} the ${x.title} weighs ${x.weight} pounds, would rather be ${x.preferences}, and obviously has a ${x.attitude} attitude. ${x.name} also commands ${x.indenturedServant}, who has kindly provided ${x.name} with <span style="color:red; font-weight: bolder">${x.hasCans}</span> cans.</div>`
-          // $("#playerTwoStats").html(MechaTwoStats);
+          $("#playerTwoStats").html("Player" + " " + playerTwo.name + " " + "has selected a" + " " + playerTwo.model + " " + "with" + " " + playerTwo.health + " " + "health, that does" + " " + playerTwo.damage + " " + "damage!");
     };
 /////////////////////////////FIGHT FUNCTIONS BELOW///////////////////////
 
