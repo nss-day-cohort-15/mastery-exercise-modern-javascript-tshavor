@@ -13,11 +13,12 @@ battledome.Combatants.Mecha = function() {
     this.health = 10;
     this.damage = 5;
     this.allowedModels = ["Gunen_Lagann", "Gundam_Unicorn", "Scout", "Vulture", "Rocketeer", "Brawler"];
+    this.setUp = false;
 
 // this is a setter that places a property on an object, and makes it part of the inheritance chain.
-this.setModel= function(modelName){
-  this.model= modelName;
-};
+    this.setModel= function(modelName){
+      this.model= modelName;
+    };
 // this is the same as doing "this.model" on every robot on the page! (this is a setter)
 }
 
